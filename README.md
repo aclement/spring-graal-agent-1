@@ -2,21 +2,20 @@
 
 Repro instructions:
 
-- in this folder run `. ./2setcp.sh` to set the classpath (CP)
+- in this folder run "`. ./2setcp.sh`" to set the classpath (CP)
 
-- this will leave you in unpack/BOOT-INF/classes
+- this will leave you in `unpack/BOOT-INF/classes`
 
-- run `../../../3run.sh`. This will execute the app with the agent
-and populate the json files in graal/META-INF/native-image.
+- run "`../../../3run.sh`". This will execute the app with the agent
+and populate the json files in `graal/META-INF/native-image`.
 
 At this point the `reflect-config.json` generated in that folder is missing:
 `org.springframework.context.support.PropertySourcesPlaceholderConfigurer`
 
-- run the native-image build `../../../4compile.sh` this will produce a `clr` executable.
+- run the native-image build "`../../../4compile.sh`" this will produce a `clr` executable.
 
 - run `clr`, it will fail with:
 ```
-
 Caused by: java.lang.ClassNotFoundException: org.springframework.context.support.PropertySourcesPlaceholderConfigurer
 	at com.oracle.svm.core.hub.ClassForNameSupport.forName(ClassForNameSupport.java:60) ~[na:na]
 	at java.lang.ClassLoader.loadClass(Target_java_lang_ClassLoader.java:131) ~[na:na]
