@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.4.0
+Build-Jdk-Spec: 11
+Implementation-Title: commandlinerunner
+Implementation-Version: 0.0.1-SNAPSHOT
+Main-Class: org.springframework.boot.loader.JarLauncher
+Start-Class: com.example.commandlinerunner.CommandlinerunnerApplication
+Spring-Boot-Version: 2.2.1.RELEASE
+Spring-Boot-Classes: BOOT-INF/classes/
+Spring-Boot-Lib: BOOT-INF/lib/
+
